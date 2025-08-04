@@ -65,3 +65,27 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+
+
+const ageModal = document.querySelectorAll('.modal-overlay')[1]; // другий оверлей — 18+
+const ageYesBtn = document.getElementById('ageYes');
+const ageNoBtn = document.getElementById('ageNo');
+
+ageYesBtn.addEventListener('click', () => {
+  ageModal.classList.remove('show');
+  // Тут можна додати збереження у localStorage, щоб не показувати повторно
+  localStorage.setItem('ageConfirmed', 'true');
+});
+
+ageNoBtn.addEventListener('click', () => {
+  window.location.href = 'https://www.google.com';
+});
+
+// При завантаженні сторінки сховати, якщо вже підтверджено
+window.addEventListener('load', () => {
+  if(localStorage.getItem('ageConfirmed') === 'true'){
+    ageModal.classList.remove('show');
+  }
+});
+
