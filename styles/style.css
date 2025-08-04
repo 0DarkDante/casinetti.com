@@ -843,7 +843,7 @@ table {
 
 .content-col p {
 	margin-bottom: 0;
-	font-size: 14px;
+	font-size: 16px;
 }
 
 .site-header .site-branding {
@@ -1656,7 +1656,7 @@ body .cky-notice .cky-title {
 	margin-bottom: 1.5rem;
 }
 
-.section-content-block .box-wrapper {
+.section-content-block .jr-container {
 	border-radius: 11px;
 	background: #14232A;
 	padding: 40px;
@@ -1743,7 +1743,7 @@ body .cky-notice .cky-title {
 }
 
 @media (max-width: 768px) {
-	.section-content-block .box-wrapper {
+	.section-content-block .jr-container {
 		padding: 16px;
 		margin-left: -12px;
 		margin-right: -12px;
@@ -1752,6 +1752,41 @@ body .cky-notice .cky-title {
 
 @media (max-width: 560px) {}
 
+.jr-section--advantages {
+	background: #161300;
+	/* темніше, ніж #1c1800 */
+	padding: 60px 20px;
+	color: #F5F5F5;
+}
+
+.jr-container {
+	max-width: 1330px;
+	margin: 0;
+}
+
+.jr-title {
+	font-size: 2.4rem;
+	margin-bottom: 2rem;
+	color: #FFC652;
+	text-transform: uppercase;
+	border-left: 5px solid #5c5a02;
+	padding-left: 14px;
+	line-height: 1.2;
+}
+
+.jr-subtitle {
+	font-size: 1.3rem;
+	color: #FFA000;
+	margin-top: 1.8rem;
+	margin-bottom: 0.5rem;
+}
+
+.jr-text {
+	font-size: 1.15rem;
+	/* Збільшено */
+	line-height: 1.7;
+	margin-bottom: 1.4rem;
+}
 
 .section-list-loop {
 	padding: 0 0 20px;
