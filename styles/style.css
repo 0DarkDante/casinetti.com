@@ -268,7 +268,7 @@ big {
 
 body {
 	background-color: #1c1800;
-	background-image: url(../images/pattern.png);
+	background-image: url(../images/pat.png);
 	background-size: auto, 190px 170px;
 	background-repeat: repeat;
 	background-position-y: -25px;
@@ -615,12 +615,12 @@ table {
 }
 
 .page-container {
-	max-width: 1984px;
+	max-width: 1465px;
 	padding-left: 32px;
 	padding-right: 32px;
 	display: flex;
-	flex-wrap: wrap;
-	margin: 0 auto;
+	flex-wrap: nowrap;
+	margin: 0;
 }
 
 .page-sidebar {
@@ -678,21 +678,6 @@ table {
 		flex: 0 0 84%;
 		padding: 32px;
 		padding-right: 0;
-	}
-
-	.sidebar-col:before {
-		content: '';
-		width: 100vw;
-		display: block;
-		height: 100%;
-		background: linear-gradient(180deg,
-			#1c1800 0%,
-			/* полностью непрозрачный сверху */
-			rgba(28, 24, 0, 0) 100%
-			/* полностью прозрачный внизу */
-		);
-		position: absolute;
-		right: 100%;
 	}
 
 	.navbar-collapse {
@@ -813,6 +798,33 @@ table {
 	width: 100%;
 }
 
+.jr-header-warning {
+	background: #5c0000;
+	color: #F5F5F5;
+	font-size: 0.9rem;
+	text-align: center;
+	padding: 10px 15px;
+}
+
+.jr-entry-content {
+	padding: 30px 20px;
+	color: #F5F5F5;
+}
+
+.jr-title {
+	font-size: 1.8rem;
+	color: #FFC652;
+	margin-bottom: 1rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.jr-description {
+	font-size: 1rem;
+	line-height: 1.6;
+	color: #F5F5F5;
+}
+
 .site-header .header-container {
 	max-width: 1984px;
 	padding-left: 32px;
@@ -823,13 +835,13 @@ table {
 	flex-wrap: wrap;
 }
 
-.header-top {
+.content-col {
 	flex: 0 0 100%;
 	margin-bottom: 10px;
 	color: rgba(255, 255, 255, 0.70);
 }
 
-.header-top p {
+.content-col p {
 	margin-bottom: 0;
 	font-size: 14px;
 }
@@ -889,7 +901,7 @@ table {
 	font-weight: 400;
 	line-height: normal;
 	border-radius: 8px;
-	background: #14232A;
+	background: #341b1bd6;
 	box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
 	padding: 10px;
 	display: flex;
@@ -902,7 +914,7 @@ table {
 .main-navigation .current-menu-item a {
 	color: #fff;
 	text-decoration: none;
-	background: #1B2C34;
+	background: #6c2121d6;
 }
 
 .navbar-collapse>div {
@@ -966,13 +978,13 @@ table {
 }
 
 @media (max-width: 560px) {
-	.header-top {
+	.content-col {
 		padding-left: 5%;
 		padding-right: 5%;
 		margin-bottom: 10px;
 	}
 
-	.header-top p {
+	.content-col p {
 		font-size: 14px;
 		text-align: center;
 	}
