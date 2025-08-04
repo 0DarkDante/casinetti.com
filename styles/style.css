@@ -425,7 +425,7 @@ table {
 }
 
 /* Make sure logo link wraps around logo image. */
-.custom-logo-link {
+.footer-logo {
 	display: inline-block;
 }
 
@@ -615,12 +615,40 @@ table {
 }
 
 .page-container {
-	max-width: 1465px;
-	padding-left: 32px;
-	padding-right: 32px;
 	display: flex;
-	flex-wrap: nowrap;
-	margin: 0;
+	flex-wrap: wrap;
+	/* дозволяє переноситись елементам на мобілках */
+	gap: 24px;
+	margin: 0 auto;
+	padding: 0 16px;
+	max-width: 1465px;
+	box-sizing: border-box;
+}
+
+/* Лівий блок — вузький */
+.page-container .left-column {
+	flex: 0 0 280px;
+	/* фіксована ширина */
+	width: 100%;
+}
+
+/* Правий блок — займає весь залишок */
+.page-container .right-column {
+	flex: 1;
+	width: 100%;
+}
+
+/* Адаптивність */
+@media (max-width: 992px) {
+	.page-container {
+		flex-direction: column;
+	}
+
+	.page-container .left-column,
+	.page-container .right-column {
+		flex: unset;
+		width: 100%;
+	}
 }
 
 .page-sidebar {
@@ -1005,27 +1033,23 @@ table {
 	text-align: center;
 }
 
-.site-footer .custom-logo-link {
+.site-footer .footer-logo {
 	display: inline-block;
 }
 
-.site-footer .custom-logo-link img {
-	max-width: 260px;
+.site-footer .footer-logo img {
+	max-width: 120px;
 }
 
 .footer-widget p {
-	font-size: 12px;
+	font-size: 14px;
 	line-height: 1.4;
 	color: #bbb;
 }
 
-.footer-widget p strong {
-	color: #fff;
-}
-
 .footer-container {
-	max-width: 782px;
-	padding: 32px 16px;
+	max-width: 1000px;
+	padding: 0 16px 32px 16px;
 	margin: 0 auto;
 }
 
@@ -1038,7 +1062,7 @@ table {
 
 .footer-logos {
 	display: flex;
-	gap: 25px;
+	gap: 50px;
 	align-items: center;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -1056,7 +1080,7 @@ table {
 	padding: 0;
 	line-height: normal;
 	display: flex;
-	justify-content: space-between;
+  justify-content: space-evenly;
 	gap: 10px;
 }
 
@@ -1103,7 +1127,7 @@ table {
 		padding: 2rem 1rem 1.5rem;
 	}
 
-	.site-footer .custom-logo-link {
+	.site-footer .footer-logo {
 		margin: 0 auto 1.5rem;
 		display: block;
 	}
