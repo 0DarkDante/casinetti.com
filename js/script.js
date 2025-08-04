@@ -89,3 +89,29 @@ window.addEventListener('load', () => {
   }
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const banner = document.getElementById('cookie-banner');
+  const acceptBtn = document.getElementById('accept-cookies');
+  const rejectBtn = document.getElementById('reject-cookies');
+
+  // Перевірка чи вже прийняли або відхилили кукі
+  const cookieConsent = localStorage.getItem('cookieConsent');
+
+  if (cookieConsent === null) {
+    // Якщо нема рішення — показати банер
+    banner.classList.add('show');
+  }
+
+  // Прийняти кукі
+  acceptBtn.addEventListener('click', () => {
+    localStorage.setItem('cookieConsent', 'accepted');
+    banner.classList.remove('show');
+  });
+
+  // Відмовитись від кукі
+  rejectBtn.addEventListener('click', () => {
+    localStorage.setItem('cookieConsent', 'rejected');
+    banner.classList.remove('show');
+  });
+});
+

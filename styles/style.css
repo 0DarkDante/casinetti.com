@@ -2507,3 +2507,84 @@ body .cky-notice .cky-title {
 .age-buttons button:active {
 	transform: scale(0.98);
 }
+
+#cookie-banner {
+	position: fixed;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	background: #441313;
+	color: #fff;
+	padding: 15px 25px;
+	border-radius: 8px;
+	box-shadow: 0 8px 20px rgba(100, 20, 20, 0.7);
+	max-width: 400px;
+	width: 90%;
+	font-size: 14px;
+	line-height: 1.4;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 15px;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.4s ease;
+	z-index: 10000;
+}
+
+#cookie-banner.show {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+#cookie-banner p {
+	flex: 1 1 100%;
+	margin: 0;
+}
+
+.cookie-buttons {
+	display: flex;
+	gap: 10px;
+	flex-shrink: 0;
+}
+
+.btn {
+	padding: 8px 18px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-weight: 600;
+	font-size: 14px;
+	transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-accept {
+	background: linear-gradient(90deg, #680202, #a02e2e);
+	color: #fff;
+	box-shadow: 0 4px 8px rgba(164, 47, 47, 0.6);
+}
+
+.btn-accept:hover {
+	background: linear-gradient(90deg, #a02e2e, #c14444);
+	transform: scale(1.05);
+}
+
+.btn-accept:active {
+	transform: scale(0.95);
+}
+
+.btn-reject {
+	background: #777;
+	color: #eee;
+}
+
+.btn-reject:hover {
+	background: #555;
+	color: #fff;
+	transform: scale(1.05);
+}
+
+.btn-reject:active {
+	transform: scale(0.95);
+}
